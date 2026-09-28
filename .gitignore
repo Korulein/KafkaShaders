@@ -1,0 +1,50 @@
+# KafkaShaders .gitignore
+# The repo root is the shaderpack root: Iris only reads shaders/, so docs and
+# LICENSE can live alongside it. Anything private (school feedback, grades,
+# Portflow exports, personal notes) belongs OUTSIDE this repo, e.g. in the
+# parent PRJKFK-Shaders folder, rather than relying on this file.
+
+# --- Release builds (publish zips as GitHub Releases, not commits) ---
+*.zip
+dist/
+build/
+
+# --- Graphics debugging / profiling output (large, machine-specific) ---
+*.rdc
+*.nsight-gfxproj
+*.ngfx-capture
+captures/raw/
+
+# --- Minecraft / Iris runtime leftovers, if a dev instance is ever pointed here ---
+logs/
+crash-reports/
+patched_shaders/
+*.log
+# Iris writes per-user option values to <packname>.txt next to the pack
+/KafkaShaders.txt
+
+# --- Private or local-only files ---
+private/
+*.local.*
+.env
+.env.*
+
+# --- Editors ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.code-workspace
+*.swp
+*~
+
+# --- Office lock files ---
+~$*
+
+# --- OS junk ---
+Thumbs.db
+ehthumbs.db
+desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
